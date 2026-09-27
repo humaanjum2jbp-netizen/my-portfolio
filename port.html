@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Huma Anjum, focused on KYC operations, customer verification, digital onboarding, customer experience, and fintech operations.">
+    <meta name="keywords" content="KYC Associate, Video KYC, Fintech Operations, Customer Verification, Digital Onboarding, Huma Anjum">
+    <meta name="author" content="Huma Anjum">
+    <meta property="og:title" content="Huma Anjum | KYC Associate | Fintech Operations">
+    <meta property="og:description" content="Professional portfolio of Huma Anjum, focused on KYC operations, customer verification, digital onboarding, and fintech operations.">
+    <meta property="og:type" content="website">
+    <title>Huma Anjum | KYC Associate | Fintech Operations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --deep-navy: #0B1220;
+            --dark-blue: #111C35;
+            --royal-blue: #2563EB;
+            --soft-blue: #60A5FA;
+            --white: #FFFFFF;
+            --off-white: #F8FAFC;
+            --slate-gray: #64748B;
+            --light-border: #E2E8F0;
+            --font-heading: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-body);
+            color: var(--deep-navy);
+            background-color: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* =========================================
+           UTILITIES
+           ========================================= */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 5rem 0; }
+        .text-center { text-align: center; }
+        .text-white { color: var(--white); }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-subtitle {
+            color: var(--slate-gray);
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* =========================================
+           BUTTONS
+           ========================================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 1.75rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background-color: var(--royal-blue);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--deep-navy);
+            border: 1.5px solid var(--light-border);
+        }
+        .btn-secondary:hover {
+            border-color: var(--royal-blue);
+            color: var(--royal-blue);
+            background-color: rgba(37, 99, 235, 0.05);
+        }
+        .btn-large { padding: 1rem 2.5rem; font-size: 1.1rem; }
+        .full-width { width: 100%; }
+
+        /* =========================================
+           NAVBAR
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.25rem 0;
+            transition: var(--transition);
+            background-color: transparent;
+        }
+        .navbar.scrolled {
+            background-color: rgba(11, 18, 32, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 0.875rem 0;
+            box-shadow: var(--shadow-md);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .nav-menu { display: flex; list-style: none; gap: 2rem; }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--white); }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--soft-blue);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--white);
+            position: relative;
+            transition: var(--transition);
+        }
+        .hamburger::before, .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+        .hamburger::before { top: -8px; }
+        .hamburger::after { top: 8px; }
+        .nav-toggle.active .hamburger { background-color: transparent; }
+        .nav-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
+        .nav-toggle.active .hamburger::after { transform: rotate(-45deg); top: 0; }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--deep-navy);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(37, 99, 235, 0.15);
+            color: var(--soft-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+        }
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--soft-blue);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            min-height: 2rem;
+        }
+        .cursor { animation: blink 1s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .hero-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            line-height: 1.7;
+        }
+        .hero-cta { display: flex; gap: 1rem; margin-bottom: 2.5rem; }
+        .hero-socials { display: flex; gap: 1.5rem; }
+        .hero-socials a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .hero-socials a:hover { color: var(--soft-blue); }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-lg);
+            max-width: 380px;
+            margin: 0 auto;
+        }
+        .profile-image-wrapper {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            border: 3px solid var(--royal-blue);
+            overflow: hidden;
+            position: relative;
+        }
+        .profile-image { width: 100%; height: 100%; object-fit: cover; }
+        .profile-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--dark-blue);
+            color: var(--soft-blue);
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .profile-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            padding: 0.375rem 0.875rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .profile-card h3 { color: var(--white); font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .profile-card p { color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; }
+
+        .hero-bg-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .circle { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; }
+        .c1 {
+            width: 400px;
+            height: 400px;
+            background-color: var(--royal-blue);
+            top: -100px;
+            right: -100px;
+            animation: float 8s ease-in-out infinite;
+        }
+        .c2 {
+            width: 300px;
+            height: 300px;
+            background-color: var(--soft-blue);
+            bottom: -50px;
+            left: -50px;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 30px); }
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about-section { background-color: var(--white); }
+        .about-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
+        .about-image .image-frame {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(11, 18, 32, 0.15);
+            border: 3px solid rgba(37, 99, 235, 0.1);
+            position: relative;
+            aspect-ratio: 4/5;
+            background-color: var(--off-white);
+            transition: var(--transition);
+        }
+        .about-image .image-frame:hover {
+            box-shadow: 0 25px 50px rgba(11, 18, 32, 0.2);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+        .about-image .image-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .about-image .image-frame:hover img { transform: scale(1.03); }
+        .about-image .placeholder-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-navy) 100%);
+            color: var(--soft-blue);
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        .about-text { color: var(--slate-gray); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8; }
+        .info-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: rgba(37, 99, 235, 0.05);
+            border-left: 4px solid var(--royal-blue);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            color: var(--deep-navy);
+            font-weight: 500;
+            margin-top: 2rem;
+        }
+        .info-card svg { color: var(--royal-blue); flex-shrink: 0; }
+
+        /* =========================================
+           HIGHLIGHTS SECTION
+           ========================================= */
+        .highlights-section { background-color: var(--off-white); }
+        .highlights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .highlight-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--light-border);
+            transition: var(--transition);
+        }
+        .highlight-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--soft-blue); }
+        .highlight-icon {
+            width: 56px;
+            height: 56px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--royal-blue);
+            margin-bottom: 1.5rem;
+        }
+        .highlight-card h3 { font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--deep-navy); }
+        .highlight-card p { color: var(--slate-gray); font-size: 0.9rem; line-height: 1.6; }
+
+        /* =========================================
+           SKILLS SECTION
+           ========================================= */
+        .skills-section { background-color: var(--white); }
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+        .skill-category { background-color: var(--off-white); padding: 2rem; border-radius: 12px; border: 1px solid var(--light-border); }
+        .skill-category h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: var(--deep-navy);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--light-border);
+        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .skill-tags span {
+            background-color: var(--white);
+            color: var(--dark-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--light-border);
+            transition: var(--transition);
+        }
+        .skill-tags span:hover { background-color: var(--royal-blue); color: var(--white); border-color: var(--royal-blue); }
+
+        /* =========================================
+           WORKFLOW SECTION
+           ========================================= */
+        .workflow-section { background-color: var(--off-white); }
+        .workflow-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 3rem 0; position: relative; }
+        .timeline-item {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--light-border);
+            position: relative;
+            transition: var(--transition);
+        }
+        .timeline-item:hover { border-color: var(--royal-blue); box-shadow: var(--shadow-md); }
+        .timeline-number { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: rgba(37, 99, 235, 0.15); margin-bottom: 0.5rem; }
+        .timeline-content h4 { font-family: var(--font-heading); font-size: 1rem; color: var(--deep-navy); margin-bottom: 0.5rem; }
+        .timeline-content p { font-size: 0.85rem; color: var(--slate-gray); line-height: 1.5; }
+        .workflow-note { color: var(--slate-gray); font-size: 0.85rem; font-style: italic; margin-top: 2rem; }
+
+        /* =========================================
+           CUSTOMER EXPERIENCE SECTION
+           ========================================= */
+        .cx-section { background-color: var(--white); }
+        .cx-statement { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; color: var(--deep-navy); max-width: 800px; margin: 0 auto 3rem; line-height: 1.4; }
+        .cx-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .cx-card {
+            background-color: var(--off-white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--light-border);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .cx-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); background-color: var(--white); }
+        .cx-card h4 { font-family: var(--font-heading); color: var(--royal-blue); margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .cx-card p { color: var(--slate-gray); font-size: 0.9rem; line-height: 1.6; }
+
+        /* =========================================
+           COMPLIANCE SECTION
+           ========================================= */
+        .compliance-section { background-color: var(--deep-navy); }
+        .compliance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .compliance-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        .compliance-card:hover { background-color: rgba(255, 255, 255, 0.08); border-color: var(--soft-blue); transform: translateY(-3px); }
+        .compliance-card h4 { color: var(--soft-blue); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .compliance-card p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.6; }
+
+        /* =========================================
+           PERFORMANCE SECTION
+           ========================================= */
+        .performance-section { background-color: var(--off-white); }
+        .performance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .perf-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--light-border);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .perf-card:hover { box-shadow: var(--shadow-md); border-color: var(--royal-blue); }
+        .perf-card h4 { font-family: var(--font-heading); color: var(--deep-navy); margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .perf-card p { color: var(--slate-gray); font-size: 0.9rem; line-height: 1.6; }
+
+        /* =========================================
+           EXPERIENCE SECTION
+           ========================================= */
+        .experience-section { background-color: var(--white); }
+        .timeline { max-width: 800px; margin: 3rem auto 0; position: relative; padding-left: 2rem; }
+        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: var(--light-border); }
+        .timeline-entry { position: relative; margin-bottom: 3rem; }
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--royal-blue);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--royal-blue);
+            transform: translateX(-5px);
+        }
+        .timeline-date { font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; color: var(--royal-blue); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .timeline-content-box { background-color: var(--off-white); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--light-border); }
+        .timeline-content-box h3 { font-family: var(--font-heading); font-size: 1.25rem; color: var(--deep-navy); margin-bottom: 0.25rem; }
+        .timeline-content-box h4 { font-size: 1rem; color: var(--slate-gray); font-weight: 500; margin-bottom: 1rem; }
+        .timeline-content-box ul { list-style: none; padding: 0; }
+        .timeline-content-box li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; color: var(--slate-gray); font-size: 0.95rem; line-height: 1.6; }
+        .timeline-content-box li::before { content: '•'; position: absolute; left: 0; color: var(--royal-blue); font-weight: bold; }
+
+        /* =========================================
+           EDUCATION SECTION
+           ========================================= */
+        .education-section { background-color: var(--off-white); }
+        .education-card {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--light-border);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .edu-icon {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--royal-blue);
+            flex-shrink: 0;
+        }
+        .edu-details h3 { font-family: var(--font-heading); font-size: 1.25rem; color: var(--deep-navy); margin-bottom: 0.25rem; }
+        .edu-major { color: var(--royal-blue); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .edu-institution { color: var(--deep-navy); font-weight: 500; margin-bottom: 0.25rem; }
+        .edu-year { color: var(--slate-gray); font-size: 0.9rem; }
+
+        /* =========================================
+           CERTIFICATIONS SECTION
+           ========================================= */
+        .certifications-section { background-color: var(--white); }
+        .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2rem; }
+        .cert-card { background-color: var(--off-white); padding: 2rem; border-radius: 12px; border: 1px solid var(--light-border); transition: var(--transition); }
+        .cert-card:hover { border-color: var(--royal-blue); box-shadow: var(--shadow-md); }
+        .cert-card h4 { font-family: var(--font-heading); color: var(--deep-navy); margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .cert-card p { color: var(--slate-gray); font-size: 0.9rem; line-height: 1.6; }
+        .cert-note { color: var(--slate-gray); font-size: 0.95rem; font-style: italic; }
+
+        /* =========================================
+           WHY KYC SECTION
+           ========================================= */
+        .why-section { background-color: var(--off-white); }
+        .why-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .why-content p { color: var(--slate-gray); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+
+        /* =========================================
+           RESUME CTA SECTION
+           ========================================= */
+        .resume-cta-section { background-color: var(--dark-blue); padding: 6rem 0; }
+        .cta-text { color: rgba(255, 255, 255, 0.8); font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* =========================================
+           CONTACT SECTION
+           ========================================= */
+        .contact-section { background-color: var(--white); }
+        .contact-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; margin-top: 3rem; }
+        .contact-info h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--deep-navy); margin-bottom: 2rem; }
+        .contact-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; color: var(--slate-gray); font-size: 0.95rem; }
+        .contact-item svg { color: var(--royal-blue); flex-shrink: 0; }
+        .contact-item a { color: var(--slate-gray); text-decoration: none; transition: var(--transition); }
+        .contact-item a:hover { color: var(--royal-blue); }
+        .contact-form { background-color: var(--off-white); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--light-border); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-family: var(--font-heading); font-size: 0.9rem; font-weight: 600; color: var(--deep-navy); margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1.5px solid var(--light-border);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--deep-navy);
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--royal-blue); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+        .form-status { margin-top: 1rem; font-size: 0.9rem; font-weight: 500; text-align: center; }
+        .form-status.success { color: #10b981; }
+        .form-status.error { color: #ef4444; }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .footer { background-color: var(--deep-navy); color: rgba(255, 255, 255, 0.6); padding: 3rem 0 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-brand h3 { color: var(--white); font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .footer-brand p { font-size: 0.9rem; }
+        .footer-links { display: flex; gap: 1.5rem; }
+        .footer-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
+        .footer-links a:hover { color: var(--soft-blue); }
+        .footer-bottom { text-align: center; font-size: 0.85rem; }
+
+        /* =========================================
+           BACK TO TOP BUTTON
+           ========================================= */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background-color: var(--royal-blue);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background-color: #1d4ed8; transform: translateY(-3px); }
+
+        /* =========================================
+           SCROLL REVEAL ANIMATIONS
+           ========================================= */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .highlights-grid, .workflow-timeline, .cx-grid, .compliance-grid, .performance-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-title { font-size: 3rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--deep-navy);
+                flex-direction: column;
+                padding: 5rem 2rem 2rem;
+                gap: 1.5rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            }
+            .nav-menu.active { right: 0; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+            .hero-description { margin: 0 auto 2rem; }
+            .hero-cta { justify-content: center; }
+            .hero-socials { justify-content: center; }
+            .about-container { grid-template-columns: 1fr; gap: 2rem; }
+            .about-image .image-frame { max-width: 400px; margin: 0 auto; }
+            .skills-grid, .contact-container { grid-template-columns: 1fr; }
+            .highlights-grid, .workflow-timeline, .cx-grid, .compliance-grid, .performance-grid, .cert-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.75rem; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.25rem; }
+            .footer-content { flex-direction: column; text-align: center; gap: 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            .hero-cta { flex-direction: column; width: 100%; }
+            .btn { width: 100%; }
+            .profile-card { padding: 1.5rem; }
+            .contact-form { padding: 1.5rem; }
+            .timeline { padding-left: 1.5rem; }
+            .timeline-entry::before { left: -1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-logo">Huma Anjum</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#kyc-workflow" class="nav-link">KYC</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content reveal">
+                <span class="hero-badge">OPEN TO KYC & FINTECH OPPORTUNITIES</span>
+                <h1 class="hero-title">Huma Anjum</h1>
+                <h2 class="hero-subtitle"><span id="typing-text"></span><span class="cursor">|</span></h2>
+                <p class="hero-description">
+                    Detail-oriented and customer-focused professional interested in digital onboarding, customer verification, KYC operations, compliance, and delivering smooth customer experiences.
+                </p>
+                <div class="hero-cta">
+                    <a href="#resume" class="btn btn-primary">View Resume</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="[YOUR LINKEDIN URL]" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="[YOUR GITHUB URL]" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:[YOUR EMAIL]">Email</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal delay-200">
+                <div class="profile-card">
+                    <div class="profile-image-wrapper">
+                        <!-- CHANGE HERO IMAGE: Replace src URL below -->
+                        <img src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/y8uwd50pe3bzlgtohppj" alt="Huma Anjum" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="profile-placeholder" style="display: none;">HA</div>
+                    </div>
+                    <div class="profile-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Verified Professional
+                    </div>
+                    <h3>KYC & Operations Specialist</h3>
+                    <p>Customer-Focused | Fintech Operations</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-elements">
+            <div class="circle c1"></div>
+            <div class="circle c2"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+        <div class="container about-container">
+            <div class="about-image reveal">
+                <div class="image-frame">
+                    <!-- ============================================ -->
+                    <!-- ABOUT IMAGE - EASY CHANGE FRIENDLY           -->
+                    <!-- Just replace the src URL below with your     -->
+                    <!-- image link. Examples:                        -->
+                    <!--   Local: assets/profile.jpg                  -->
+                    <!--   Online: https://i.imgur.com/yourcode.jpg   -->
+                    <!-- ============================================ -->
+                    <img id="aboutProfileImage" 
+                         src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/y8uwd50pe3bzlgtohppj" 
+                         alt="Huma Anjum Professional"
+                         onerror="handleImageError(this)">
+                </div>
+            </div>
+            <div class="about-content reveal delay-200">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I am an MBA (HR & Finance) professional with a strong foundation in business operations, client coordination, documentation management, and customer support. My experience spans reviewing and verifying international documents, performing rigorous data validation, and maintaining strict compliance standards.
+                </p>
+                <p class="about-text">
+                    I excel in client onboarding, workflow optimization, and stakeholder communication. My approach is rooted in accuracy, regulatory compliance awareness, and a deep commitment to delivering exceptional customer experiences during critical verification processes.
+                </p>
+                <div class="info-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    <span>Focused on accuracy, compliance & customer experience.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHTS SECTION -->
+    <section class="section highlights-section">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-card reveal">
+                    <div class="highlight-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>01. Customer Focus</h3>
+                    <p>Dedicated to making every verification interaction clear, professional, and comfortable for the customer.</p>
+                </div>
+                <div class="highlight-card reveal delay-100">
+                    <div class="highlight-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <h3>02. Attention to Detail</h3>
+                    <p>Meticulous in document validation, data verification, and maintaining zero-defect accuracy standards.</p>
+                </div>
+                <div class="highlight-card reveal delay-200">
+                    <div class="highlight-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h3>03. Clear Communication</h3>
+                    <p>Strong verbal and written communication skills for effective query resolution and stakeholder alignment.</p>
+                </div>
+                <div class="highlight-card reveal delay-300">
+                    <div class="highlight-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>04. Process & Compliance</h3>
+                    <p>Strict adherence to internal policies, regulatory guidelines, and due diligence protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <h3>KYC & Operations</h3>
+                    <div class="skill-tags">
+                        <span>Client Onboarding</span>
+                        <span>Documentation Management</span>
+                        <span>Data Validation</span>
+                        <span>Due Diligence</span>
+                        <span>Process Adherence</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal delay-100">
+                    <h3>Customer Interaction</h3>
+                    <div class="skill-tags">
+                        <span>Business Communication</span>
+                        <span>Customer Support</span>
+                        <span>Active Listening</span>
+                        <span>Query Resolution</span>
+                        <span>Professional Presentation</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal delay-200">
+                    <h3>Professional Skills</h3>
+                    <div class="skill-tags">
+                        <span>Attention to Detail</span>
+                        <span>Accuracy</span>
+                        <span>Time Management</span>
+                        <span>Problem Solving</span>
+                        <span>Team Collaboration</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal delay-300">
+                    <h3>Fintech Operations</h3>
+                    <div class="skill-tags">
+                        <span>Workflow Optimization</span>
+                        <span>Operational Efficiency</span>
+                        <span>Quality & Accuracy</span>
+                        <span>CRM Management</span>
+                        <span>Customer Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KYC WORKFLOW -->
+    <section id="kyc-workflow" class="section workflow-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Understanding the KYC Journey</h2>
+            <div class="workflow-timeline reveal">
+                <div class="timeline-item"><div class="timeline-number">01</div><div class="timeline-content"><h4>Customer Onboarding</h4><p>Initial data collection and welcome interaction.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">02</div><div class="timeline-content"><h4>Information Review</h4><p>Preliminary check of submitted details for completeness.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">03</div><div class="timeline-content"><h4>Document Verification</h4><p>Validation of identity and address proofs.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">04</div><div class="timeline-content"><h4>Live Video Interaction</h4><p>Real-time identity confirmation and liveness check.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">05</div><div class="timeline-content"><h4>Identity Validation</h4><p>Cross-referencing data with authoritative sources.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">06</div><div class="timeline-content"><h4>Due Diligence</h4><p>Assessing risk profiles and background checks.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">07</div><div class="timeline-content"><h4>Compliance Review</h4><p>Final audit against regulatory and internal policies.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">08</div><div class="timeline-content"><h4>Verification Completion</h4><p>Account activation and seamless handover to operations.</p></div></div>
+            </div>
+            <p class="workflow-note text-center reveal">* This is an illustrative overview of a typical digital KYC workflow and does not represent any specific company's internal process.</p>
+        </div>
+    </section>
+
+    <!-- CUSTOMER EXPERIENCE -->
+    <section class="section cx-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Customer Experience Matters</h2>
+            <p class="cx-statement text-center reveal">"Making every verification interaction clear, professional, and comfortable for the customer."</p>
+            <div class="cx-grid">
+                <div class="cx-card reveal"><h4>Clear Communication</h4><p>Guiding customers through requirements with patience and clarity.</p></div>
+                <div class="cx-card reveal delay-100"><h4>Patient Customer Handling</h4><p>Empathetic support for users unfamiliar with digital processes.</p></div>
+                <div class="cx-card reveal delay-200"><h4>Accurate Information Collection</h4><p>Ensuring data is captured correctly the first time to prevent delays.</p></div>
+                <div class="cx-card reveal delay-300"><h4>Smooth Digital Onboarding</h4><p>Reducing friction in the user journey while maintaining security.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLIANCE -->
+    <section class="section compliance-section">
+        <div class="container">
+            <h2 class="section-title text-center text-white reveal">Accuracy. Compliance. Trust.</h2>
+            <div class="compliance-grid">
+                <div class="compliance-card reveal"><h4>Regulatory Compliance</h4><p>Strict adherence to KYC/AML guidelines and internal policies.</p></div>
+                <div class="compliance-card reveal delay-100"><h4>Data Privacy</h4><p>Handling sensitive customer information with utmost confidentiality.</p></div>
+                <div class="compliance-card reveal delay-200"><h4>Accurate Documentation</h4><p>Meticulous record-keeping and audit-ready documentation management.</p></div>
+                <div class="compliance-card reveal delay-300"><h4>Process Consistency</h4><p>Appropriate escalation of discrepancies and standardized workflows.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section class="section performance-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Operational Performance</h2>
+            <p class="text-center section-subtitle reveal">Understanding the metrics that drive fintech operational excellence.</p>
+            <div class="performance-grid">
+                <div class="perf-card reveal"><h4>VKYC Completion</h4><p>Ensuring high first-time-right rates in video verification sessions.</p></div>
+                <div class="perf-card reveal delay-100"><h4>Average Handling Time (AHT)</h4><p>Balancing speed with thoroughness in customer interactions.</p></div>
+                <div class="perf-card reveal delay-200"><h4>Quality & Accuracy</h4><p>Maintaining zero-defect standards in data validation and documentation.</p></div>
+                <div class="perf-card reveal delay-300"><h4>Customer Experience</h4><p>Driving high satisfaction scores through professional and empathetic service.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-entry reveal">
+                    <div class="timeline-date">Feb 2026 – Present</div>
+                    <div class="timeline-content-box">
+                        <h3>Automation Operations Executive</h3>
+                        <h4>MBG Cart India Pvt. Ltd.</h4>
+                        <ul>
+                            <li>Manage client onboarding and project coordination.</li>
+                            <li>Coordinate website, WhatsApp, Facebook, and Instagram integrations.</li>
+                            <li>Work with technical teams to ensure timely project delivery.</li>
+                            <li>Support workflow automation and process improvement initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-entry reveal delay-100">
+                    <div class="timeline-date">Sep 2024 – May 2025</div>
+                    <div class="timeline-content-box">
+                        <h3>International Document Analyst</h3>
+                        <h4>WNS Global Services Pvt. Ltd.</h4>
+                        <ul>
+                            <li>Reviewed and verified international documents for authenticity.</li>
+                            <li>Performed rigorous data validation and quality checks.</li>
+                            <li>Maintained documentation accuracy and strict compliance standards.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-entry reveal delay-200">
+                    <div class="timeline-date">Jun 2022 – Sep 2024</div>
+                    <div class="timeline-content-box">
+                        <h3>Computer Operator & Administrative Assistant</h3>
+                        <h4>Law Firm</h4>
+                        <ul>
+                            <li>Managed legal documentation, records, and administrative operations.</li>
+                            <li>Prepared official correspondence and maintained client records.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Education</h2>
+            <div class="education-card reveal">
+                <div class="edu-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div class="edu-details">
+                    <h3>Master of Business Administration (MBA)</h3>
+                    <p class="edu-major">Human Resources & Finance</p>
+                    <p class="edu-institution">Renaissance University</p>
+                    <p class="edu-year">2018 – 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section certifications-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Certifications & Learning</h2>
+            <div class="cert-grid">
+                <div class="cert-card reveal"><h4>KYC / AML Learning</h4><p>Continuous learning in anti-money laundering frameworks and identity verification best practices.</p></div>
+                <div class="cert-card reveal delay-100"><h4>Banking & Fintech Learning</h4><p>Understanding digital banking ecosystems, operational workflows, and regulatory landscapes.</p></div>
+                <div class="cert-card reveal delay-200"><h4>Customer Service Excellence</h4><p>Training in empathetic communication, conflict resolution, and professional client handling.</p></div>
+            </div>
+            <p class="text-center cert-note reveal">Currently building advanced knowledge in KYC, fintech operations, and customer experience.</p>
+        </div>
+    </section>
+
+    <!-- WHY KYC -->
+    <section class="section why-section">
+        <div class="container">
+            <div class="why-content reveal">
+                <h2 class="section-title">Why KYC & Fintech?</h2>
+                <p>I am deeply drawn to the fintech sector because it sits at the intersection of innovation, security, and customer empowerment. Digital banking and seamless customer onboarding are transforming how people interact with financial services.</p>
+                <p>I want to be part of this transformation by ensuring that identity verification and compliance-driven operations are not just regulatory checkboxes, but smooth, secure, and respectful experiences for the customer. My background in documentation management, data validation, and client coordination aligns perfectly with the meticulous nature of KYC operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME CTA -->
+    <section id="resume" class="section resume-cta-section">
+        <div class="container text-center reveal">
+            <h2 class="section-title text-white">Let's Connect</h2>
+            <p class="cta-text">Interested in discussing an opportunity or learning more about my professional profile?</p>
+            <a href="resume.pdf" target="_blank" class="btn btn-primary btn-large">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <h3>Let's Talk</h3>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>[YOUR EMAIL]</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>[YOUR PHONE]</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Jabalpur, Madhya Pradesh, India</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="[YOUR LINKEDIN URL]" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <a href="[YOUR GITHUB URL]" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal delay-200">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required placeholder="Your Name"></div>
+                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="your.email@example.com"></div>
+                        <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" required placeholder="Opportunity / Inquiry"></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea></div>
+                        <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                        <p id="formStatus" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Huma Anjum</h3>
+                    <p>KYC Associate | Fintech Operations</p>
+                </div>
+                <div class="footer-links">
+                    <a href="[YOUR LINKEDIN URL]" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="[YOUR GITHUB URL]" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:[YOUR EMAIL]">Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Huma Anjum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT - ALL IN ONE                      -->
+    <!-- ============================================ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // IMAGE ERROR HANDLER
+            window.handleImageError = function(imgElement) {
+                imgElement.style.display = 'none';
+                const placeholder = document.createElement('div');
+                placeholder.className = 'placeholder-img';
+                placeholder.textContent = 'HA';
+                imgElement.parentNode.appendChild(placeholder);
+            };
+
+            // 1. MOBILE HAMBURGER MENU
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // 2. NAVBAR BACKGROUND ON SCROLL
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 3. ACTIVE NAVIGATION LINK
+            const sections = document.querySelectorAll('section[id]');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // 4. TYPING ANIMATION
+            const typingText = document.getElementById('typing-text');
+            const phrases = ["KYC Associate", "Video KYC Specialist", "Customer Verification Expert", "Fintech Operations Professional"];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function typeEffect() {
+                const currentPhrase = phrases[phraseIndex];
+                if (isDeleting) {
+                    typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 100;
+                }
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    typingSpeed = 2000;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    typingSpeed = 500;
+                }
+                setTimeout(typeEffect, typingSpeed);
+            }
+            typeEffect();
+
+            // 5. SCROLL REVEAL ANIMATIONS
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 6. BACK TO TOP BUTTON
+            const backToTopBtn = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 7. CONTACT FORM VALIDATION
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+                if (!name || !email || !subject || !message) {
+                    formStatus.textContent = 'Please fill in all fields.';
+                    formStatus.className = 'form-status error';
+                    return;
+                }
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    formStatus.textContent = 'Please enter a valid email address.';
+                    formStatus.className = 'form-status error';
+                    return;
+                }
+                formStatus.textContent = 'Message sent successfully! (Connect to Formspree/EmailJS for real delivery)';
+                formStatus.className = 'form-status success';
+                contactForm.reset();
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                    formStatus.className = 'form-status';
+                }, 5000);
+            });
+
+            // 8. CURRENT YEAR IN FOOTER
+            const currentYearSpan = document.getElementById('currentYear');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
